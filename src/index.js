@@ -54,16 +54,16 @@ function countUniqueValues(arr) {
   // use multiple pointer pattern
   let left = 0;
   let right = arr.length - 1;
-  while (left < right) {
-    // create a new array removing duplicates and count how many values
-    let newArr = [];
-    // how to iterate through the last array
-
-    if (arr[left] !== arr[left + 1]) {
-      newArr[left];
-    } else if (arr[right] !== arr[right - 1]) {
-      newArr[right];
+  // create a new array removing duplicates and count how many values
+  let newArr = [];
+  // how to iterate through the last array
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[left[i]] !== arr[left[i] + 1]) {
+      newArr[left[i]];
+    } else if (arr[right[i]] !== arr[right[i] - 1]) {
+      newArr[right[i]];
     }
   }
+  return newArr;
   console.log(newArr);
 }
