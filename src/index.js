@@ -57,13 +57,13 @@ function countUniqueValues(arr) {
   // create a new array removing duplicates and count how many values
   let newArr = [];
   // how to iterate through the last array
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[left[i]] !== arr[left[i] + 1]) {
-      newArr[left[i]];
-    } else if (arr[right[i]] !== arr[right[i] - 1]) {
-      newArr[right[i]];
+  while (left < right) {
+    if (arr[left] < arr[left + 1]) {
+      newArr.push(arr[left]);
+    } else if (arr[right - 1] < arr[right]) {
+      newArr.push(arr[right]);
     }
   }
-  return newArr;
   console.log(newArr);
+  return newArr;
 }
