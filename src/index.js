@@ -59,7 +59,7 @@ function countUniqueValues(arr) {
   // how to iterate through the last array
   while (left < right) {
     if (arr[left] < arr[left + 1]) {
-      newArr.push(arr[left]);
+      newArr.unshift(arr[left]);
     } else if (arr[right - 1] < arr[right]) {
       newArr.push(arr[right]);
     }
