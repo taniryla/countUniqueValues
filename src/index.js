@@ -59,10 +59,10 @@ function countUniqueValues(arr) {
     let newArr = [];
     // how to iterate through the last array
 
-    if (arr[left] === arr[left + 1]) {
-      newArr[left++];
-    } else if (arr[right] === arr[right - 1]) {
-      newArr[right--];
+    if (arr[left] !== arr[left + 1]) {
+      newArr[left];
+    } else if (arr[right] !== arr[right - 1]) {
+      newArr[right];
     }
   }
   console.log(newArr);
