@@ -58,11 +58,24 @@ function countUniqueValues(arr) {
   let newArr = [];
   // how to iterate through the last array
   while (left < right) {
-    if (arr[left] < arr[left + 1]) {
-      newArr.unshift(arr[left]);
-    } else if (arr[right - 1] < arr[right]) {
-      newArr.push(arr[right]);
+    let leftSum = arr[left] - arr[left + 1];
+    let rightSum = arr[right] - arr[right - 1];
+    if (leftSum === 0) {
+      left++;
+      console.log(leftSum);
+      newArr.unshift(leftSum);
+    } else if (rightSum === 0) {
+      right--;
+      console.log(rightSum);
+      newArr.push(rightSum);
     }
+    // if (arr[left] < arr[left + 1]) {
+    //   newArr.unshift(arr[left]);
+    //   left++;
+    // } else if (arr[right - 1] < arr[right]) {
+    //   newArr.push(arr[right]);
+    //   right--;
+    // }
   }
   console.log(newArr);
   return newArr;
